@@ -1,41 +1,29 @@
-# OmniAuth::Crest
+# OmniAuth Crest
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/crest`. To experiment with that code, run `bin/console` for an interactive prompt.
+An OmniAuth strategy for authenticating to the EVE Online CREST API. To use it, you'll need to sign up for an OAuth2 Application ID and Secret on the [EVE: Developers](https://developers.eveonline.com) page.
 
-TODO: Delete this and the text above, and describe your gem
+## Basic Usage
+Only provides verification of the character signing into the website.
 
-## Installation
+    use OmniAuth::Builder do
+      provider :crest, ENV['CREST_ID'], ENV['CREST_SECRET']
+    end
 
-Add this line to your application's Gemfile:
+## Scopes
 
-```ruby
-gem 'omniauth-crest'
-```
+CREST allows you to set scopes to determine what protected data access_tokens will be able to access once authenticated. 
 
-And then execute:
+    use OmniAuth::Builder do
+      provider :crest, ENV['CREST_ID'], ENV['CREST_SECRET'], scope: "characterFittingsRead characterFittingsWrite"
+    end
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install omniauth-crest
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+More info on [Scopes](https://eveonline-third-party-documentation.readthedocs.org/en/latest/crest/authentication/).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-crest.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tarisatram/omniauth-crest.
 
 
 ## License
-
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
