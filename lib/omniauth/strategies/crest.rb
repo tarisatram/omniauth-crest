@@ -5,7 +5,9 @@ module OmniAuth
     class Crest < OmniAuth::Strategies::OAuth2
       option :name, 'crest'
       option :client_options, {
-        site: 'https://login.eveonline.com'
+        site: 'https://login.eveonline.com',
+        authorize_url: 'https://login.eveonline.com/oauth/authorize',
+        token_url: 'https://login.eveonline.com/oauth/token'
       }
 
       def raw_info
