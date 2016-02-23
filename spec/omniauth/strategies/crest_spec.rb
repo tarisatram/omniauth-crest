@@ -43,6 +43,16 @@ describe OmniAuth::Strategies::Crest do
       expect(subject.uid).to eq(raw_info_hash['CharacterOwnerHash'])
     end
   end
+
+  describe 'extra' do
+    before do
+      allow(subject).to receive(:raw_info).and_return(raw_info_hash)
+    end
+
+    it 'should return the raw_info' do
+      expect(subject.extra[:raw_info]).to eq(raw_info_hash)
+    end
+  end
 end
 
 private
