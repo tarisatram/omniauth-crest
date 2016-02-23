@@ -23,5 +23,29 @@ describe OmniAuth::Strategies::Crest do
       expect(subject.options.client_options.token_url).to eq('https://login.eveonline.com/oauth/token')
     end
   end
+
+  describe 'info' do
+    before do
+      allow(subject).to receive(:raw_info).and_return(raw_info_hash)
+    end
+
+    it 'should return the character name' do
+      expect(subject.info[:name]).to eq(raw_info_hash['CharacterName'])
+    end
+  end
+end
+
+private
+
+def raw_info_hash
+  {
+    "CharacterID"          => 12345678,
+    "CharacterName"        => "Foo Bar",
+    "ExpiresOn"            => "2016-02-20T00:00:00",
+    "Scopes"               => "characterLocationRead characterNavigationWrite",
+    "TokenType"            => "Character",
+    "CharacterOwnerHash"   => "1234567890abcdefghijklmnopq",
+    "IntellectualProperty" => "EVE"
+  }
 end
 
