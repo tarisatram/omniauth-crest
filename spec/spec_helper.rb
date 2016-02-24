@@ -1,7 +1,6 @@
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
 $:.unshift File.expand_path('..', __FILE__)
 $:.unshift File.expand_path('../../lib', __FILE__)
+require "codeclimate-test-reporter"
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
@@ -9,6 +8,7 @@ require 'omniauth'
 require 'omniauth-crest'
 
 WebMock.disable_net_connect!(:allow => "codeclimate.com")
+CodeClimate::TestReporter.start
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include WebMock::API
