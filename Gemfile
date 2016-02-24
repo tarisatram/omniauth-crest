@@ -8,3 +8,5 @@ group :development, :test do
   gem 'simplecov'
   gem 'webmock'
 end
+
+gem "codeclimate-test-reporter", group: :test, require: nil
