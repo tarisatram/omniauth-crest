@@ -2,6 +2,8 @@
 
 An OmniAuth strategy for authenticating to the EVE Online CREST API. To use it, you'll need to sign up for an OAuth2 Application ID and Secret on the [EVE: Developers](https://developers.eveonline.com) page.
 
+[![Build Status](https://travis-ci.org/tarisatram/omniauth-crest.svg?branch=master)](https://travis-ci.org/tarisatram/omniauth-crest)
+
 ## Basic Usage
 Only provides verification of the character signing into the website.
 
