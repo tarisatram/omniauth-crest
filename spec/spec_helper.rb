@@ -1,9 +1,7 @@
-$:.unshift File.expand_path('..', __FILE__)
-$:.unshift File.expand_path('../../lib', __FILE__)
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
-require 'simplecov'
-SimpleCov.start
+$:.unshift File.expand_path('..', __FILE__)
+$:.unshift File.expand_path('../../lib', __FILE__)
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
