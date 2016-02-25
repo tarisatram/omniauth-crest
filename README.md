@@ -2,7 +2,7 @@
 
 An OmniAuth strategy for authenticating to the EVE Online CREST API. To use it, you'll need to sign up for an OAuth2 Application ID and Secret on the [EVE: Developers](https://developers.eveonline.com) page.
 
-[![Build Status](https://travis-ci.org/tarisatram/omniauth-crest.svg?branch=master)](https://travis-ci.org/tarisatram/omniauth-crest) [![Code Climate](https://codeclimate.com/github/tarisatram/omniauth-crest/badges/gpa.svg)](https://codeclimate.com/github/tarisatram/omniauth-crest) [![Test Coverage](https://codeclimate.com/github/tarisatram/omniauth-crest/badges/coverage.svg)](https://codeclimate.com/github/tarisatram/omniauth-crest/coverage)
+[![Build Status](https://travis-ci.org/tarisatram/omniauth-crest.svg?branch=master)](https://travis-ci.org/tarisatram/omniauth-crest) [![Code Climate](https://codeclimate.com/github/tarisatram/omniauth-crest/badges/gpa.svg)](https://codeclimate.com/github/tarisatram/omniauth-crest) [![Test Coverage](https://codeclimate.com/github/tarisatram/omniauth-crest/badges/coverage.svg)](https://codeclimate.com/github/tarisatram/omniauth-crest/coverage) [![Dependency Status](https://gemnasium.com/tarisatram/omniauth-crest.svg)](https://gemnasium.com/tarisatram/omniauth-crest)
 
 ## Basic Usage
 Only provides verification of the character signing into the website.
