@@ -32,6 +32,22 @@ describe OmniAuth::Strategies::Crest do
     it 'should return the character name' do
       expect(subject.info[:name]).to eq(raw_info_hash['CharacterName'])
     end
+
+    it 'should return the character id' do
+      expect(subject.info[:character_id]).to eq(raw_info_hash['CharacterID'])
+    end
+
+    it 'should return the access token expiration' do
+      expect(subject.info[:expires_on]).to eq(raw_info_hash['ExpiresOn'])
+    end
+
+    it 'should return the oauth2 scopes' do
+      expect(subject.info[:scopes]).to eq(raw_info_hash['Scopes'])
+    end
+
+    it 'should return the token type' do
+      expect(subject.info[:token_type]).to eq(raw_info_hash['TokenType'])
+    end
   end
 
   describe 'uid' do
@@ -41,6 +57,11 @@ describe OmniAuth::Strategies::Crest do
 
     it 'should return the CharacterOwnerHash' do
       expect(subject.uid).to eq(raw_info_hash['CharacterOwnerHash'])
+    end
+  end
+
+  describe '#raw_info' do
+    it 'should return raw_info_hash' do
     end
   end
 

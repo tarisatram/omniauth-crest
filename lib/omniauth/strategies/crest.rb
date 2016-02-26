@@ -17,7 +17,13 @@ module OmniAuth
       uid { raw_info['CharacterOwnerHash'] }
 
       info do 
-        { name: raw_info['CharacterName'] }
+        { 
+          name: raw_info['CharacterName'],
+          character_id: raw_info['CharacterID'],
+          expires_on: raw_info['ExpiresOn'],
+          scopes: raw_info['Scopes'],
+          token_type: raw_info['TokenType']
+        }
       end
 
       extra do
